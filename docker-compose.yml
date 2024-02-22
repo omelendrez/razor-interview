@@ -21,6 +21,7 @@ services:
     profiles: ["terminal"] # We don't want it to automatically start with "docker-compose up"
     volumes:
       - .:/nodejs-exercise
+      - /nodejs-exercise/node_modules
 
   vscodemocha:
     container_name: vscodemocha
@@ -31,6 +32,7 @@ services:
       - 5858:5858
     volumes:
       - .:/nodejs-exercise
+      - /nodejs-exercise/node_modules
 
 volumes:
   postgresql-data:
